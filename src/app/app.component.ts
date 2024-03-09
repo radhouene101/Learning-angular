@@ -9,5 +9,6 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'first_project';
+  title = 'first project';
+  body = 'i like the hot reload'
 }
