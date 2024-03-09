@@ -10,6 +10,6 @@ export class LeComponentComponent {
   public email: string = '';
   public message: string = '';
   onSubmit():void{
-    console.log("name is",this.name)
+    console.log("name eis",this.name)
   }
 }
