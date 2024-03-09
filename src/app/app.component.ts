@@ -10,5 +10,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'first project';
-  body = 'i like the hot reload'
+  body = 'i like the hot reload';
 }
