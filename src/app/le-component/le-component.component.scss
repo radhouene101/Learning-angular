@@ -1,0 +1,105 @@
+$base-spacing:20px;
+$font-color:#333;
+$primary-color:#007bff;
+$border-color:#ccc;
+$background-color:#f8f9fa;
+$box-shadow-color:rgba(100, 100, 111, 0.2);
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  gap: $base-spacing;
+  padding: $base-spacing * 2;
+  background-color: $background-color;
+  min-height: 100vh;
+}
+
+form {
+  background: #ffffff;
+  padding: $base-spacing * 2;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px $box-shadow-color;
+  width: 100%;
+  max-width: 500px;
+
+  h2 {
+    color: $primary-color;
+    font-size: 24px;
+    margin-bottom: $base-spacing;
+  }
+
+  label {
+    display: block;
+    margin-bottom: $base-spacing / 2;
+    color: $font-color;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: $base-spacing;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    font-size: 16px;
+
+    &:focus {
+      border-color: $primary-color;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+    }
+  }
+}
+
+.data-display {
+  background: #ffffff;
+  padding: $base-spacing * 2;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px $box-shadow-color;
+  width: 100%;
+  max-width: 500px;
+
+  h3 {
+    color: $primary-color;
+    font-size: 22px;
+    margin-bottom: $base-spacing;
+  }
+
+  p {
+    color: $font-color;
+    font-size: 16px;
+    margin-bottom: $base-spacing / 2;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

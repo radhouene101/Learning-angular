@@ -1,0 +1,19 @@
+<p>le-component works!</p>
+<div>
+  <form (ngSubmit)="onSubmit()" >
+    <h2> MYFORM</h2>
+    <label>firstName</label>
+    <input type="text"  [(ngModel)]="name" name="ouki" >
+    <label>email</label>
+    <input type="email"  [(ngModel)]="email" name="email">
+    <label>Message</label>
+    <textarea  [(ngModel)]="message" name="lol"></textarea>
+    <button type="submit">le button</button>
+  </form>
+  <div>
+    <h3> form data</h3>
+    <p>First Name: {{ name }}</p>
+    <p>Email: {{ email }}</p>
+    <p>Message:{{ message }}</p>
+  </div>
+</div>
