@@ -3,17 +3,40 @@
   <form (ngSubmit)="onSubmit()" >
     <h2> MYFORM</h2>
     <label>firstName</label>
-    <input type="text"  [(ngModel)]="name" name="ouki" >
+    <input
+      type="text"
+      [(ngModel)]="name"
+      name="ouki"
+    >
+
     <label>email</label>
     <input type="email"  [(ngModel)]="email" name="email">
     <label>Message</label>
     <textarea  [(ngModel)]="message" name="lol"></textarea>
     <button type="submit">le button</button>
   </form>
-  <div>
+  <div *ngIf="isSubmitted" class="panel-body">
     <h3> form data</h3>
-    <p>First Name: {{ name }}</p>
-    <p>Email: {{ email }}</p>
-    <p>Message:{{ message }}</p>
+
+    <table class="table-latitude">
+      <thead>
+      <tr>
+        <th>##</th>
+        <th>firstName</th>
+        <th>Email</th>
+        <th>Message</th>
+      </tr>
+      <tr>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let msg of messages;let i=index">
+        <td>{{i}}</td>
+        <td>{{msg.name}}</td>
+        <td>{{msg.email}}</td>
+        <td>{{msg.message}}</td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </div>
