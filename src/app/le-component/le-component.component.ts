@@ -9,7 +9,15 @@ export class LeComponentComponent {
   public name: string = '';
   public email: string = '';
   public message: string = '';
+  isSubmitted = false;
+  messages: Array<any>=[];
   onSubmit():void{
-    console.log("name is",this.name)
+    this.messages.push({
+      "name":this.name,
+      "email":this.email,
+      "message":this.message
+    })
+    this.isSubmitted= true;
+    console.log(this.messages)
   }
 }
