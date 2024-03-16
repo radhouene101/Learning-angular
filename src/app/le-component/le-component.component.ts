@@ -20,4 +20,8 @@ export class LeComponentComponent {
     this.isSubmitted= true;
     console.log(this.messages)
   }
+
+  deleteMessage(index: number) {
+    this.messages.splice(index,1);
+  }
 }

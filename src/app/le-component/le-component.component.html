@@ -15,10 +15,10 @@
     <textarea  [(ngModel)]="message" name="lol"></textarea>
     <button type="submit">le button</button>
   </form>
-  <div *ngIf="isSubmitted" class="panel-body">
+<!--  <div >
     <h3> form data</h3>
 
-    <table class="table-latitude">
+   <table class="table-latitude">
       <thead>
       <tr>
         <th>##</th>
@@ -31,12 +31,23 @@
       </thead>
       <tbody>
       <tr *ngFor="let msg of messages;let i=index">
-        <td>{{i}}</td>
+        <td>{{i+1}}</td>
         <td>{{msg.name}}</td>
         <td>{{msg.email}}</td>
         <td>{{msg.message}}</td>
       </tr>
       </tbody>
     </table>
+  </div>-->
+  <div class="flex-container" *ngIf="isSubmitted">
+    <app-messages-details
+      *ngFor="let msg of messages;let i=index"
+      [message]="msg"
+      [ind]="i"
+      (delete)="deleteMessage($event)"
+    >
+
+    </app-messages-details>
+
   </div>
 </div>
