@@ -43,7 +43,7 @@
     <app-messages-details
       *ngFor="let msg of messages;let i=index"
       [message]="msg"
-      [ind]="i"
+      [index]="i"
       (delete)="deleteMessage($event)"
     >
 

@@ -9,12 +9,12 @@ export class MessagesDetailsComponent {
   @Input()
   message : any ={};
   @Input()
-  ind : number=-1 ;
+  index : number=-1 ;
 
 
   @Output()
   delete: EventEmitter<number> = new EventEmitter<number>();
   onDelete():void{
-    this.delete.emit(this.ind);
+    this.delete.emit(this.index);
   }
 }

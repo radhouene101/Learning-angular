@@ -6,12 +6,15 @@ import { AppComponent } from './app.component';
 import { LeComponentComponent } from './le-component/le-component.component';
 import {FormsModule} from "@angular/forms";
 import { MessagesDetailsComponent } from './messages-details/messages-details.component';
+import { MyFirstService } from './services/my-first.service';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LeComponentComponent,
-    MessagesDetailsComponent
+    MessagesDetailsComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +22,7 @@ import { MessagesDetailsComponent } from './messages-details/messages-details.co
     FormsModule
   ],
   providers: [
+    MyFirstService,
     provideClientHydration()
   ],
   bootstrap: [AppComponent]

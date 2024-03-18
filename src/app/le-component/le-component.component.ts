@@ -1,4 +1,5 @@
-import {Component, signal} from '@angular/core';
+import {Component, signal,inject} from '@angular/core';
+import { MyFirstService } from '../services/my-first.service';
 
 @Component({
   selector: 'app-le-component',
@@ -10,9 +11,16 @@ export class LeComponentComponent {
   public email: string = '';
   public message: string = '';
   isSubmitted = false;
+  private service:MyFirstService=inject(MyFirstService);
+  constructor(
+  ) {
+    this.messages=this.service.getAllMessages();
+    this.isSubmitted=this.messages.length>0;
+  }
+
   messages: Array<any>=[];
   onSubmit():void{
-    this.messages.push({
+    this.service.insert({
       "name":this.name,
       "email":this.email,
       "message":this.message
@@ -22,6 +30,6 @@ export class LeComponentComponent {
   }
 
   deleteMessage(index: number) {
-    this.messages.splice(index,1);
+    this.service.deleteMessage(index);
   }
 }
