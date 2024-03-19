@@ -6,15 +6,19 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss'
 })
-export class AboutComponent implements OnInit{
+export class AboutComponent {
+  // param:any;
+  // extra:any;
   constructor(
     private activatedRoute: ActivatedRoute
 
   ) {
   }
 
-  ngOnInit(): void {
+ /* ngOnInit(): void {
     console.log(this.activatedRoute);
-  }
-    param:any;
+    this.param=this.activatedRoute.snapshot.params['username']
+    this.extra=this.activatedRoute.snapshot.queryParams['password']
+  }*/
+
 }

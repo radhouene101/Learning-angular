@@ -16,10 +16,6 @@ const routes: Routes = [
   {
     path: 'about/:username',
     component: AboutComponent
-  },
-  {
-    path: ':username',
-    component: AboutComponent
   }
 ];
 
