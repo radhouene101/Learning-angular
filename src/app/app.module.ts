@@ -8,13 +8,15 @@ import {FormsModule} from "@angular/forms";
 import { MessagesDetailsComponent } from './messages-details/messages-details.component';
 import { MyFirstService } from './services/my-first.service';
 import { MenuComponent } from './menu/menu.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LeComponentComponent,
     MessagesDetailsComponent,
-    MenuComponent
+    MenuComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
