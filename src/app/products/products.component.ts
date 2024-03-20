@@ -14,6 +14,7 @@ export class ProductsComponent  implements OnInit{
 
   ) {
   }
+
   products:Array<ProductRepresentation> = [];
 
   ngOnInit(): void {

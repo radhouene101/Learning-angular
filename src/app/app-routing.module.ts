@@ -22,11 +22,11 @@ const routes: Routes = [
   {
     path: 'products',
     component: ProductsComponent
-  },
+  }/*,
   {
     path: 'new-product',
     component: ProductDetailsComponent
-  }
+  }*/
 ];
 
 @NgModule({
