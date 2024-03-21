@@ -4,6 +4,7 @@ import { LeComponentComponent } from './le-component/le-component.component';
 import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { NewProductComponent } from './new-product/new-product.component';
 
 // @ts-ignore
 const routes: Routes = [
@@ -22,11 +23,11 @@ const routes: Routes = [
   {
     path: 'products',
     component: ProductsComponent
-  }/*,
+  },
   {
     path: 'new-product',
-    component: ProductDetailsComponent
-  }*/
+    component: NewProductComponent
+  }
 ];
 
 @NgModule({
